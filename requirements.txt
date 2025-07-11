@@ -1,0 +1,42 @@
+# Core Dependencies
+torch>=2.0.0
+torchvision>=0.15.0
+diffusers>=0.21.0
+transformers>=4.25.0
+accelerate>=0.20.0
+xformers>=0.0.20
+
+# Image Processing
+Pillow>=9.5.0
+opencv-python>=4.8.0
+numpy>=1.24.0
+scipy>=1.10.0
+
+# ComfyUI Dependencies
+comfyui>=0.1.0
+folder_paths
+model_management
+
+# ControlNet & Extensions
+controlnet-aux>=0.0.6
+insightface>=0.7.3
+onnxruntime>=1.15.0
+
+# API & Web Interface
+fastapi>=0.100.0
+uvicorn>=0.23.0
+websockets>=11.0
+gradio>=3.40.0
+
+# Utilities
+tqdm>=4.65.0
+requests>=2.31.0
+PyYAML>=6.0
+python-dotenv>=1.0.0
+huggingface-hub>=0.16.0
+
+# Development
+pytest>=7.4.0
+black>=23.7.0
+flake8>=6.0.0
+pre-commit>=3.3.0

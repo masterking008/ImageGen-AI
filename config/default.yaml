@@ -1,0 +1,75 @@
+# ImgGen AI Default Configuration
+
+# Directory paths
+model_dir: "data/models"
+output_dir: "data/outputs"
+cache_dir: "data/cache"
+temp_dir: "data/temp"
+
+# Generation settings
+generation:
+  default_width: 1024
+  default_height: 1024
+  default_steps: 20
+  default_guidance_scale: 7.5
+  max_width: 2048
+  max_height: 2048
+  max_steps: 100
+  default_scheduler: "DPMSolverMultistepScheduler"
+
+# Model configurations
+models:
+  sdxl_model: "stabilityai/stable-diffusion-xl-base-1.0"
+  sdxl_refiner: "stabilityai/stable-diffusion-xl-refiner-1.0"
+  
+  controlnet_models:
+    canny: "diffusers/controlnet-canny-sdxl-1.0"
+    depth: "diffusers/controlnet-depth-sdxl-1.0"
+    pose: "thibaud/controlnet-openpose-sdxl-1.0"
+    scribble: "xinsir/controlnet-scribble-sdxl-1.0"
+  
+  # InstantID configuration
+  instantid:
+    model_path: "InstantX/InstantID"
+    face_adapter: "ip-adapter.bin"
+    controlnet_path: "InstantX/InstantID/ControlNetModel"
+
+# UI Configuration
+ui:
+  host: "127.0.0.1"
+  port: 8188
+  auto_launch: true
+  theme: "dark"
+  max_queue_size: 10
+
+# ComfyUI Integration
+comfyui:
+  custom_nodes_path: "comfyui/custom_nodes"
+  workflows_path: "comfyui/workflows"
+  models_path: "comfyui/models"
+  
+# Performance settings
+performance:
+  enable_xformers: true
+  enable_cpu_offload: true
+  enable_sequential_cpu_offload: false
+  use_fp16: true
+  batch_size: 1
+  
+# Safety settings
+safety:
+  enable_safety_checker: true
+  nsfw_filter: true
+  
+# Logging
+logging:
+  level: "INFO"
+  file: "logs/imggen.log"
+  max_file_size: "10MB"
+  backup_count: 5
+
+# API settings
+api:
+  enable_cors: true
+  max_request_size: "50MB"
+  rate_limit: "100/minute"
